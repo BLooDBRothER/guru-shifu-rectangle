@@ -1,27 +1,21 @@
 package com.thoughtworks.rectangle;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 import org.junit.jupiter.api.Test;
 
 public class RectangleTest {
 
     @Test
-    public void calculatePerimeter_WithLengthAndBreadth_Equals160 () {
-        Rectangle rectangle = new Rectangle(20, 60);
-
-        int perimeter = rectangle.calculatePerimeter();
-
-        assertEquals(160, perimeter);
-    }
-
-    @Test
-    public void calculateArea_WithLengthAndBreadth_Equals200 () {
+    public void shouldReturnAreaWhenLengthAndBreadthIsGiven() {
         Rectangle rectangle = new Rectangle(10, 20);
 
-        int area = rectangle.calculateArea();
+        int area = rectangle.area();
 
-        assertEquals(200, area);
+        assertThat(area, is(equalTo(200)));
+
     }
-    
+
 }

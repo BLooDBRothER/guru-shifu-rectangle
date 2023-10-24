@@ -8,11 +8,7 @@ class Rectangle {
         this.breadth = breadth;
     }
 
-    public int calculatePerimeter() {
-        return 2 * (length + breadth);
-    }
-
-    public int calculateArea() {
+    public int area() {
         return length * breadth;
     }
 
